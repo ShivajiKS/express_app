@@ -1,0 +1,14 @@
+html
+    head
+        title My First Pug App
+    body
+        center 
+            h1  Product Page...
+        ul
+            each item in products 
+                li
+                    a(href=`/products/${item.id}`)=item.title 
+                    img(src=`${item.image}`, width="200px", height="200px")
+                    p=item.description 
+                    h5=item.price 
+
